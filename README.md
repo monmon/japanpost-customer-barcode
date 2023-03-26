@@ -1,0 +1,1 @@
+# japanpost-customer-barcode

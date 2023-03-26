@@ -1,0 +1,40 @@
+{
+  "name": "japanpost-customer-barcode",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "TS_NODE_TRANSPILE_ONLY=1 mocha --require ts-node/register --require espower-typescript/guess test/**/*.test.ts",
+    "build": "tsc",
+    "lint": "eslint 'src/**/*.ts' --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monmon/japanpost-customer-barcode.git"
+  },
+  "author": "monmon",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/monmon/japanpost-customer-barcode/issues"
+  },
+  "homepage": "https://github.com/monmon/japanpost-customer-barcode#readme",
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.10",
+    "@types/power-assert": "^1.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "espower-typescript": "^10.0.1",
+    "mocha": "^10.2.0",
+    "power-assert": "^1.6.1",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
