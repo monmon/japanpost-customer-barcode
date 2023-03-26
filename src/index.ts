@@ -1,4 +1,4 @@
-export class CustomerBarcode {
+export class JapanpostCustomerBarcode {
   postalCode: string;
   address: string;
   data: string[];

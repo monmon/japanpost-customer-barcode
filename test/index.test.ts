@@ -1,8 +1,8 @@
 import assert = require('assert');
 
-import { CustomerBarcode } from '../src/';
+import { JapanpostCustomerBarcode } from '../src/';
 
-describe('CustomerBarcode', () => {
+describe('JapanpostCustomerBarcode', () => {
   describe('https://www.post.japanpost.jp/zipcode/zipmanual/p25.html', () => {
     [{
       postalCode: "263-0023",
@@ -103,7 +103,7 @@ describe('CustomerBarcode', () => {
     }].forEach(testCase => {
       context(`${testCase.postalCode} ${testCase.address}`, () => {
         it('対応したデータを生成できるべき',  () => {
-          const customerBarcode = new CustomerBarcode(testCase.postalCode, testCase.address)
+          const customerBarcode = new JapanpostCustomerBarcode(testCase.postalCode, testCase.address)
 
           assert.deepEqual(customerBarcode.data, testCase.expected);
         })
@@ -143,7 +143,7 @@ describe('CustomerBarcode', () => {
     }].forEach(testCase => {
       context(`${testCase.postalCode} ${testCase.address}`, () => {
         it('base64のデータが返るべき',  () => {
-          const customerBarcode = new CustomerBarcode(testCase.postalCode, testCase.address)
+          const customerBarcode = new JapanpostCustomerBarcode(testCase.postalCode, testCase.address)
 
           assert.deepEqual(customerBarcode.toBase64(), testCase.expected);
         })
