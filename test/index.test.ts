@@ -1,6 +1,6 @@
 import assert = require('assert');
 
-import { CustomerBarcode } from '../src/customer_barcode';
+import { CustomerBarcode } from '../src/';
 
 describe('CustomerBarcode', () => {
   describe('https://www.post.japanpost.jp/zipcode/zipmanual/p25.html', () => {
